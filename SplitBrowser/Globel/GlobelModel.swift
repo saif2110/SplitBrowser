@@ -133,3 +133,34 @@ extension UIImageView {
 
 
 
+
+class BlurredTransparentView: UIView {
+    
+    // Initializer for programmatically created views
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupBlurEffect()
+    }
+    
+    // Initializer for views loaded from a storyboard
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setupBlurEffect()
+    }
+    
+    private func setupBlurEffect() {
+        // Choose the style of the blur effect you want
+        let blurEffect = UIBlurEffect(style: .systemChromeMaterialDark) // or .extraLight, .dark
+        
+        // Create a UIVisualEffectView which will render the blur effect
+        let blurredEffectView = UIVisualEffectView(effect: blurEffect)
+        
+        // Make sure the effect view resizes to always fit the entire view
+        blurredEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        blurredEffectView.frame = self.bounds
+        
+        // Add the effect view to the view hierarchy
+        addSubview(blurredEffectView)
+        blurredEffectView.layer.zPosition = -1  // Put the blur view behind other content
+    }
+}

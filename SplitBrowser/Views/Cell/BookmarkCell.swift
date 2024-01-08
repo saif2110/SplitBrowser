@@ -33,24 +33,22 @@ class BookmarkCell: UICollectionViewCell {
         let main = URL(string: urlString)
         let domain = main?.host
         let wholeURL = (main?.scheme ?? "") + "://" + (domain ?? "") + "/favicon.ico"
-        
-        
+    
         iconImage.loadImage(from: wholeURL) { success, error in
             if !success{
                 self.iconImage.isHidden = true
                 self.iconofBookmark.isHidden = false
-                if let firstLetter = getFirstLetterOfDomain(from: domain ?? "") {
-                    self.iconofBookmark.text = firstLetter.uppercased()
-                } else {
-                    self.iconofBookmark.text = "W"
-                }
+                self.iconofBookmark.text = String(domain?.first ?? "H").capitalized
             }
         }
         
     }
     
     override func prepareForReuse() {
-        iconImage.image = nil
+        super.prepareForReuse()
+        iconImage.isHidden = false
+        iconofBookmark.isHidden = true
+        iconImage.image = nil // Reset the image
     }
     
 }

@@ -109,14 +109,80 @@ class WebviewClass: UIView,UITextFieldDelegate {
             homepage.isHidden = false
             self.bookmark = getBookmarks()
             self.bookmarCollection.reloadData()
-
+            
             
         default:
             break
         }
         
     }
-  
+    
+    private func hitwebview(url:String){
+        webbar.isHidden = true
+        homepage.isHidden = true
+        menuSlack.isHidden = true
+        self.endEditing(true)
+        loadContent(from: url, in: webview)
+    }
+    
+    private func loadContent(from text: String, in webView: WKWebView) {
+        // Function to create a URL with a default scheme if needed
+        func createURL(withString string: String) -> URL? {
+            if let url = URL(string: string), UIApplication.shared.canOpenURL(url) {
+                return url
+            } else if string.contains(".") && !string.contains(" ") {
+                return URL(string: "https://" + string)
+            } else {
+                return nil
+            }
+        }
+        
+        // Check if the text is a valid URL or can be made into one
+        if let url = createURL(withString: text) {
+            // Load the URL directly in the WebView
+            let request = URLRequest(url: url)
+            webView.load(request)
+            print("Loading URL: \(url)")
+        } else {
+            // Treat the text as a Google search query
+            let query = text.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? ""
+            if let searchURL = URL(string: "https://www.google.com/search?q=\(query)") {
+                let request = URLRequest(url: searchURL)
+                webView.load(request)
+                print("Performing Google search for: \(text)")
+            } else {
+                print("Invalid search query")
+            }
+        }
+    }
+    
+    
+    @IBAction func searchEngineButtons(_ sender: UIButton) {
+        let tag = sender.tag
+        
+        switch tag {
+        case 0:
+            hitwebview(url: "https://www.google.com/")
+            break
+            
+        case 1:
+            hitwebview(url: "https://www.bing.com/")
+            break
+            
+        case 2:
+            hitwebview(url: "https://duckduckgo.com/")
+            break
+            
+        case 3:
+            hitwebview(url: "https://search.yahoo.com/")
+            break
+            
+        default:
+            break
+        }
+        
+    }
+    
 }
 
 extension WebviewClass:UICollectionViewDelegate,UICollectionViewDataSource {
@@ -143,35 +209,10 @@ extension WebviewClass:UICollectionViewDelegate,UICollectionViewDataSource {
         return cell
     }
     
-}
-
-class BlurredTransparentView: UIView {
     
-    // Initializer for programmatically created views
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupBlurEffect()
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let link = bookmark[indexPath.row]
+        hitwebview(url: link)
     }
     
-    // Initializer for views loaded from a storyboard
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setupBlurEffect()
-    }
-    
-    private func setupBlurEffect() {
-        // Choose the style of the blur effect you want
-        let blurEffect = UIBlurEffect(style: .systemChromeMaterialDark) // or .extraLight, .dark
-        
-        // Create a UIVisualEffectView which will render the blur effect
-        let blurredEffectView = UIVisualEffectView(effect: blurEffect)
-        
-        // Make sure the effect view resizes to always fit the entire view
-        blurredEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        blurredEffectView.frame = self.bounds
-        
-        // Add the effect view to the view hierarchy
-        addSubview(blurredEffectView)
-        blurredEffectView.layer.zPosition = -1  // Put the blur view behind other content
-    }
 }
