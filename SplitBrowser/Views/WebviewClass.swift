@@ -19,6 +19,7 @@ class WebviewClass: UIView,UITextFieldDelegate {
         return true
     }
     
+    @IBOutlet weak var noBookmarksYet: UILabel!
     @IBOutlet weak var webbar: UIView!
     var delegate:textfiledDelegate?
     @IBOutlet weak var homepage: UIView!
@@ -124,6 +125,10 @@ extension WebviewClass:UICollectionViewDelegate,UICollectionViewDataSource {
         
         if bookmark.count == 0 {
             self.bookmarCollection.isHidden = true
+            self.noBookmarksYet.isHidden = false
+        }else{
+            self.noBookmarksYet.isHidden = true
+            self.bookmarCollection.isHidden = false
         }
         
         return bookmark.count

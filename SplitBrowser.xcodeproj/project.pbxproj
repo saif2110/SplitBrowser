@@ -20,7 +20,8 @@
 		6A15A4F22B42D72700532C18 /* SplitViewHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A15A4ED2B42D72700532C18 /* SplitViewHandle.swift */; };
 		6A15A4F32B42D72700532C18 /* SplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A15A4EF2B42D72700532C18 /* SplitView.swift */; };
 		6A15A4F42B42D72700532C18 /* SplitViewSnapBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A15A4F02B42D72700532C18 /* SplitViewSnapBehavior.swift */; };
-		6A15A4F62B42D7A300532C18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A15A4F52B42D7A300532C18 /* Assets.xcassets */; };
+		6A9093E52B4AE7CB008E0D08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A9093E42B4AE7CB008E0D08 /* Assets.xcassets */; };
+		6A9093E82B4AE909008E0D08 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A9093E72B4AE909008E0D08 /* Welcome.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +41,8 @@
 		6A15A4EE2B42D72700532C18 /* SplitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplitView.h; sourceTree = "<group>"; };
 		6A15A4EF2B42D72700532C18 /* SplitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitView.swift; sourceTree = "<group>"; };
 		6A15A4F02B42D72700532C18 /* SplitViewSnapBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitViewSnapBehavior.swift; sourceTree = "<group>"; };
-		6A15A4F52B42D7A300532C18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../Assets.xcassets; sourceTree = "<group>"; };
+		6A9093E42B4AE7CB008E0D08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6A9093E72B4AE909008E0D08 /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +81,7 @@
 				6A15A4C82B42D67D00532C18 /* AppDelegate.swift */,
 				6A15A4CC2B42D67D00532C18 /* ViewController.swift */,
 				6A15A4DC2B42D6AB00532C18 /* Main.storyboard */,
-				6A15A4F52B42D7A300532C18 /* Assets.xcassets */,
+				6A9093E42B4AE7CB008E0D08 /* Assets.xcassets */,
 				6A15A4D32B42D67F00532C18 /* LaunchScreen.storyboard */,
 				6A15A4D62B42D67F00532C18 /* Info.plist */,
 			);
@@ -89,6 +91,7 @@
 		6A15A4E02B42D6C400532C18 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6A9093E62B4AE900008E0D08 /* Welcome */,
 				6A15A4EA2B42D6E800532C18 /* Cell */,
 				6A15A4E12B42D6CD00532C18 /* Webview.xib */,
 				6A15A4DE2B42D6C000532C18 /* WebviewClass.swift */,
@@ -123,6 +126,14 @@
 				6A15A4F02B42D72700532C18 /* SplitViewSnapBehavior.swift */,
 			);
 			path = SplitView;
+			sourceTree = "<group>";
+		};
+		6A9093E62B4AE900008E0D08 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				6A9093E72B4AE909008E0D08 /* Welcome.storyboard */,
+			);
+			path = Welcome;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,7 +198,8 @@
 				6A15A4E92B42D6E400532C18 /* BookmarkCell.xib in Resources */,
 				6A15A4E22B42D6CD00532C18 /* Webview.xib in Resources */,
 				6A15A4D52B42D67F00532C18 /* LaunchScreen.storyboard in Resources */,
-				6A15A4F62B42D7A300532C18 /* Assets.xcassets in Resources */,
+				6A9093E52B4AE7CB008E0D08 /* Assets.xcassets in Resources */,
+				6A9093E82B4AE909008E0D08 /* Welcome.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
