@@ -16,6 +16,13 @@ class ViewController: UIViewController,WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        DispatchQueue.main.async {
+            let main = UIStoryboard(name: "Welcome", bundle: Bundle.main)
+            let vc = main.instantiateViewController(identifier: "WelcomeVC")
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: false)
+        }
+        
         wkwebview.delegate = self
         wkwebviewTwo.delegate = self
         
