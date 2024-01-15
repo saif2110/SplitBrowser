@@ -240,7 +240,7 @@ func stopIndicator() {
 struct Manager {
     
     private static let isProKey = "isPro"
-    private static let travalData = "travalData"
+    private static let isWelcomeDoneKey = "isWelcomeDone"
     private static let numberofTimesAppOpenKey = "numberofTimesAppOpen"
     private static let depthSelected = "depthSelected"
     private static let queryHit = "queryHit"
@@ -256,4 +256,15 @@ struct Manager {
             UserDefaults.standard.set(newValue, forKey: isProKey)
         }
     }
+    
+    
+    static var isWelcomeDone: Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: isWelcomeDoneKey)
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: isWelcomeDoneKey)
+        }
+    }
+    
 }

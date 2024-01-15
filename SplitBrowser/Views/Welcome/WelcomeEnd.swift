@@ -17,6 +17,9 @@ class WelcomeEnd: UIViewController {
     
 
     @IBAction func `continue`(_ sender: Any) {
+      
+        Manager.isWelcomeDone = true
+        
         DispatchQueue.main.async {
             let vc = IAPViewController()
             self.navigationController?.pushViewController(vc, animated: true)

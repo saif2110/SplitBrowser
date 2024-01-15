@@ -176,6 +176,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Onboarding 3" translatesAutoresizingMaskIntoConstraints="NO" id="t6H-c1-pZg">
+                                <rect key="frame" x="30" y="79" width="333" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="k5g-og-8et"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUN-oJ-ED5">
                                 <rect key="frame" x="20" y="409" width="353" height="33"/>
                                 <string key="text">Split Screen Browser
@@ -192,7 +198,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ea9-2T-YfZ">
-                                <rect key="frame" x="17" y="743" width="359" height="55"/>
+                                <rect key="frame" x="17" y="753" width="359" height="55"/>
                                 <color key="backgroundColor" name="MainColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="1y7-zK-lrx"/>
@@ -211,12 +217,6 @@
                                     <action selector="continue:" destination="GkY-pE-kRR" eventType="touchUpInside" id="5TY-hB-CS2"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Onboarding 3" translatesAutoresizingMaskIntoConstraints="NO" id="t6H-c1-pZg">
-                                <rect key="frame" x="30" y="79" width="333" height="300"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="k5g-og-8et"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="riu-8t-nFb"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -230,16 +230,16 @@
                             <constraint firstItem="t6H-c1-pZg" firstAttribute="top" secondItem="riu-8t-nFb" secondAttribute="top" constant="20" id="KXH-kp-fu4"/>
                             <constraint firstItem="riu-8t-nFb" firstAttribute="trailing" secondItem="6hw-Af-Ast" secondAttribute="trailing" constant="16" id="Kh3-k0-Rih"/>
                             <constraint firstItem="6hw-Af-Ast" firstAttribute="top" secondItem="XUN-oJ-ED5" secondAttribute="bottom" constant="20" id="Ly2-Xw-h0t"/>
-                            <constraint firstItem="riu-8t-nFb" firstAttribute="bottom" secondItem="ea9-2T-YfZ" secondAttribute="bottom" constant="20" id="WDO-9f-bs3"/>
                             <constraint firstItem="riu-8t-nFb" firstAttribute="trailing" secondItem="XUN-oJ-ED5" secondAttribute="trailing" constant="20" id="bTM-Fp-xQl"/>
                             <constraint firstItem="t6H-c1-pZg" firstAttribute="leading" secondItem="riu-8t-nFb" secondAttribute="leading" constant="30" id="fql-3J-wON"/>
+                            <constraint firstItem="riu-8t-nFb" firstAttribute="bottom" secondItem="ea9-2T-YfZ" secondAttribute="bottom" constant="10" id="xT9-RX-ZNV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="OF3-ld-uuU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W6k-Ar-d9e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1618" y="12"/>
+            <point key="canvasLocation" x="1617.5572519083969" y="11.971830985915494"/>
         </scene>
     </scenes>
     <resources>
