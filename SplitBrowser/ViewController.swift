@@ -68,9 +68,13 @@ class ViewController: UIViewController,WKNavigationDelegate {
         if wkwebview.textfiled.isFirstResponder {
             self.activeWebView = "Upper"
             self.keyboardDetected()
-        }else{
+            return
+        }
+        
+        if wkwebviewTwo.textfiled.isFirstResponder {
             self.activeWebView = "Below"
             self.keyboardDetected()
+            return
         }
         
         
@@ -80,6 +84,7 @@ class ViewController: UIViewController,WKNavigationDelegate {
                 
                 self?.activeWebView = "Upper"
                 self?.keyboardDetected()
+                return
             }
         }
         
@@ -87,6 +92,7 @@ class ViewController: UIViewController,WKNavigationDelegate {
             if isFocused {
                 self?.activeWebView = "Below"
                 self?.keyboardDetected()
+                return
             }
         }
         
