@@ -32,7 +32,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboarding" translatesAutoresizingMaskIntoConstraints="NO" id="ab4-rk-5Di">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboarding" translatesAutoresizingMaskIntoConstraints="NO" id="ab4-rk-5Di">
                                 <rect key="frame" x="30" y="79" width="333" height="290"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="290" id="bbV-88-8Mz"/>
@@ -103,7 +103,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboarding 2" translatesAutoresizingMaskIntoConstraints="NO" id="2x7-XJ-wmx">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboarding 2" translatesAutoresizingMaskIntoConstraints="NO" id="2x7-XJ-wmx">
                                 <rect key="frame" x="30" y="79" width="333" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="HlK-xZ-8Pn"/>
@@ -176,7 +176,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Onboarding 3" translatesAutoresizingMaskIntoConstraints="NO" id="t6H-c1-pZg">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Onboarding 3" translatesAutoresizingMaskIntoConstraints="NO" id="t6H-c1-pZg">
                                 <rect key="frame" x="30" y="79" width="333" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="k5g-og-8et"/>
@@ -247,7 +247,7 @@
         <image name="onboarding" width="2224" height="2001"/>
         <image name="onboarding 2" width="1970" height="1686"/>
         <namedColor name="MainColor">
-            <color red="0.29532089829444885" green="0.5" blue="0.8996046781539917" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.29499998688697815" green="0.5" blue="0.89999997615814209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

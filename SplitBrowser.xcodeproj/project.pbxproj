@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A0182C62B5C454F00FB061B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6A0182C52B5C454F00FB061B /* GoogleService-Info.plist */; };
+		6A0182C92B5C46B200FB061B /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 6A0182C82B5C46B200FB061B /* FirebaseAnalyticsOnDeviceConversion */; };
+		6A0182CB2B5C46B200FB061B /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6A0182CA2B5C46B200FB061B /* FirebaseAnalyticsSwift */; };
 		6A15A4C92B42D67D00532C18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A15A4C82B42D67D00532C18 /* AppDelegate.swift */; };
 		6A15A4CD2B42D67D00532C18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A15A4CC2B42D67D00532C18 /* ViewController.swift */; };
 		6A15A4D52B42D67F00532C18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A15A4D32B42D67F00532C18 /* LaunchScreen.storyboard */; };
@@ -29,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6A0182C52B5C454F00FB061B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6A15A4C52B42D67D00532C18 /* SplitBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A15A4C82B42D67D00532C18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A15A4CC2B42D67D00532C18 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,7 +61,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A0182CB2B5C46B200FB061B /* FirebaseAnalyticsSwift in Frameworks */,
 				6A86435A2B53DA40008CDFB2 /* RevenueCat in Frameworks */,
+				6A0182C92B5C46B200FB061B /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +89,7 @@
 		6A15A4C72B42D67D00532C18 /* SplitBrowser */ = {
 			isa = PBXGroup;
 			children = (
+				6A0182C52B5C454F00FB061B /* GoogleService-Info.plist */,
 				6A15A4EB2B42D72700532C18 /* SplitView */,
 				6A15A4E32B42D6D100532C18 /* Globel */,
 				6A15A4E02B42D6C400532C18 /* Views */,
@@ -173,6 +180,8 @@
 			name = SplitBrowser;
 			packageProductDependencies = (
 				6A8643592B53DA40008CDFB2 /* RevenueCat */,
+				6A0182C82B5C46B200FB061B /* FirebaseAnalyticsOnDeviceConversion */,
+				6A0182CA2B5C46B200FB061B /* FirebaseAnalyticsSwift */,
 			);
 			productName = SplitBrowser;
 			productReference = 6A15A4C52B42D67D00532C18 /* SplitBrowser.app */;
@@ -204,6 +213,7 @@
 			mainGroup = 6A15A4BC2B42D67D00532C18;
 			packageReferences = (
 				6A8643582B53DA40008CDFB2 /* XCRemoteSwiftPackageReference "purchases-ios" */,
+				6A0182C72B5C46B200FB061B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 6A15A4C62B42D67D00532C18 /* Products */;
 			projectDirPath = "";
@@ -220,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A15A4DD2B42D6AB00532C18 /* Main.storyboard in Resources */,
+				6A0182C62B5C454F00FB061B /* GoogleService-Info.plist in Resources */,
 				6A8643572B52FBE2008CDFB2 /* IAPViewController.xib in Resources */,
 				6A15A4E92B42D6E400532C18 /* BookmarkCell.xib in Resources */,
 				6A15A4E22B42D6CD00532C18 /* Webview.xib in Resources */,
@@ -460,6 +471,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		6A0182C72B5C46B200FB061B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 		6A8643582B53DA40008CDFB2 /* XCRemoteSwiftPackageReference "purchases-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/RevenueCat/purchases-ios";
@@ -471,6 +490,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		6A0182C82B5C46B200FB061B /* FirebaseAnalyticsOnDeviceConversion */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6A0182C72B5C46B200FB061B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsOnDeviceConversion;
+		};
+		6A0182CA2B5C46B200FB061B /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6A0182C72B5C46B200FB061B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
 		6A8643592B53DA40008CDFB2 /* RevenueCat */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6A8643582B53DA40008CDFB2 /* XCRemoteSwiftPackageReference "purchases-ios" */;
