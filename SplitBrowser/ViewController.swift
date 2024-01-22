@@ -25,6 +25,15 @@ class ViewController: UIViewController,WKNavigationDelegate {
             }
         }
         
+        
+        if !Manager.isPro {
+            DispatchQueue.main.async {
+                let vc = IAPViewController()
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: false)
+            }
+        }
+        
         wkwebview.delegate = self
         wkwebviewTwo.delegate = self
         
