@@ -121,13 +121,14 @@ class IAPViewController: UIViewController {
     
     @IBAction func continueButton(_ sender: Any) {
         self.skipButton.isHidden = true
-        self.continueButton.isUserInteractionEnabled = false
+        //self.continueButton.isUserInteractionEnabled = false
         
         if selectedPackage != nil {
             startIndicator(self: self)
             Purchases.shared.purchase(package: selectedPackage!) { (transaction, purchaserInfo, error, userCancelled) in
                 self.skipButton.isHidden = false
                 self.continueButton.isUserInteractionEnabled = true
+                stopIndicator()
                 //print(purchaserInfo,error)
                 
                 if !(purchaserInfo?.entitlements.active.isEmpty ?? true) {
@@ -136,7 +137,7 @@ class IAPViewController: UIViewController {
                     
                 }else{
                     //self.backButtonoutlet.isHidden = false
-                    stopIndicator()
+                    
                     
                 }
                 
