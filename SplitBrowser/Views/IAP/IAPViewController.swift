@@ -40,12 +40,7 @@ class IAPViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //self.scrollView.contentInsetAdjustmentBehavior = .never
-        
-//        weeklyButton.borderColorV = borderColor
-//        yearlyButton.borderColorV = borderColor
-//        yearlyButton.backgroundColor = selectedColor
+        skipButton.isHidden = Manager.isnumberofTimesAppOpenKey > 3
         revenuCat()
         
         self.skipButton.alpha = 0.0
@@ -267,5 +262,15 @@ struct Manager {
             UserDefaults.standard.set(newValue, forKey: isWelcomeDoneKey)
         }
     }
+    
+    static var isnumberofTimesAppOpenKey: Int {
+        get {
+            return UserDefaults.standard.integer(forKey: numberofTimesAppOpenKey)
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: numberofTimesAppOpenKey)
+        }
+    }
+    
     
 }

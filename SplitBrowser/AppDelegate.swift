@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Purchases.configure(withAPIKey: "appl_eFjYMmOjbhhlRGuvvrXsBnoxHQE")
         
         isPurchasesed()
+        Manager.isnumberofTimesAppOpenKey = Manager.isnumberofTimesAppOpenKey + 1
         
         return true
     }
